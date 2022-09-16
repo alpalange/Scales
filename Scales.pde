@@ -42,9 +42,18 @@ void scale(int x, int y) {
   endShape();
 
   //inner scale
-  int red = (int)(Math.random()*150);
-  int green = (int)(Math.random()*50)+110;
-  int blue = (int)(Math.random()*50)+120;
+  int red;
+  int green;
+  int blue;
+
+  if (mousePressed == true) {
+    red = 75;
+    green = 135;
+    blue = 145; }
+  else {
+    red = (int)(Math.random()*150);
+    green = (int)(Math.random()*50)+110;
+    blue = (int)(Math.random()*50)+120; }
   fill(red, green, blue);
   noStroke();
   beginShape();
